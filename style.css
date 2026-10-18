@@ -1,0 +1,135 @@
+:root {
+  --green: #0F6B5F;
+  --orange: #F2A93B;
+  --ink: #16302B;
+  --mist: #F4F7F5;
+  --line: #E6EFEC;
+
+  --bs-body-font-family: 'Montserrat', system-ui, sans-serif;
+  --bs-body-color: var(--ink);
+  --bs-body-bg: var(--line);
+}
+
+body {
+  font-family: var(--bs-body-font-family);
+  color: var(--ink);
+  background: linear-gradient(160deg, var(--line), #d5e3df);
+  min-height: 100vh;
+}
+
+/* Card */
+.ticket-card {
+  border: 0;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  box-shadow: 0 1.25rem 2.5rem rgba(22, 48, 43, .18);
+}
+.ticket-card .card-header {
+  margin: 0;
+  padding: 1.5rem 1.5rem 1.25rem;
+  background: var(--green);
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 700;
+  border-bottom: 0;
+}
+.ticket-card .card-body { padding: 1.5rem; }
+@media (min-width: 768px) {
+  .ticket-card .card-body { padding: 2.5rem 3rem; }
+}
+
+/* Labels */
+.form-label, legend.form-label {
+  font-size: .8rem;
+  font-weight: 600;
+  margin-bottom: .4rem;
+}
+.form-check-label { font-size: .8rem; }
+
+/* Inputs */
+.form-control, .form-select {
+  background-color: var(--mist);
+  border: 1px solid var(--line);
+  border-radius: .65rem;
+  font-size: .85rem;
+  color: var(--ink);
+}
+.form-floating > label { font-size: .85rem; color: #5d746e; }
+.form-control:focus, .form-select:focus {
+  background-color: #fff;
+  border-color: var(--green);
+  box-shadow: 0 0 0 .25rem rgba(15, 107, 95, .2);
+}
+.form-control:user-invalid, .form-select:user-invalid { border-color: #dc3545; }
+
+/* Radios, checkbox, switch */
+.form-check-input:checked {
+  background-color: var(--green);
+  border-color: var(--green);
+}
+.form-check-input:focus {
+  border-color: var(--green);
+  box-shadow: 0 0 0 .25rem rgba(15, 107, 95, .25);
+}
+
+/* +7 prefix (input group) */
+.input-group-text {
+  background: var(--green);
+  border-color: var(--green);
+  color: #fff;
+  font-weight: 600;
+  font-size: .85rem;
+}
+
+/* One way / Round trip */
+.trip-switch {
+  border: 1px solid var(--green);
+  border-radius: 50rem;
+  overflow: hidden;
+  background: #fff;
+}
+.btn-seg {
+  border: 0;
+  border-radius: 0;
+  padding: .45rem 1.5rem;
+  color: var(--green);
+  font-size: .85rem;
+  font-weight: 600;
+}
+.btn-check:checked + .btn-seg { background: var(--green); color: #fff; }
+.btn-check:focus-visible + .btn-seg { outline: 3px solid var(--orange); outline-offset: -3px; }
+@media (max-width: 575.98px) {
+  .trip-switch { display: flex; width: 100%; }
+  .trip-switch .btn-seg { flex: 1; }
+}
+
+/* Buttons */
+.btn-find, .btn-clear {
+  border-radius: 50rem;
+  padding: .65rem 1.75rem;
+  font-size: .85rem;
+  font-weight: 600;
+}
+.btn-find {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: var(--orange);
+  --bs-btn-border-color: var(--orange);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #e0942a;
+  --bs-btn-hover-border-color: #e0942a;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #d1871f;
+  --bs-btn-active-border-color: #d1871f;
+  --bs-btn-focus-shadow-rgb: 242, 169, 59;
+}
+.btn-clear {
+  --bs-btn-color: var(--ink);
+  --bs-btn-bg: #fff;
+  --bs-btn-border-color: var(--ink);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: var(--ink);
+  --bs-btn-hover-border-color: var(--ink);
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: var(--ink);
+  --bs-btn-focus-shadow-rgb: 22, 48, 43;
+}
